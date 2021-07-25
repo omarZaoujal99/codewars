@@ -117,3 +117,11 @@ function sortArray(array) {
     const myArr =  array.filter(v=>v%2).sort((a,b)=>a-b);
     return array.map(v=>v%2 ? myArr.shift() : v);
 }
+
+// --------------------------------
+
+// 7- HTML dynamic color string generation
+var generateColor = function() {
+  let randomHexe = (Math.random() * 0xfffff * 10).toString(16).slice(0,6);
+  return "#" + randomHexe;
+};

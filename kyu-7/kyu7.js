@@ -6,7 +6,6 @@
 
 // 1- Over The Road
 function findNextSquare(sq) {
-    // Return the next square if sq is a perfect square, -1 otherwise
     var numsq = sq;
     var checksq = Math.sqrt(numsq);
     if(checksq % 1 === 0){
@@ -190,4 +189,63 @@ function addBinary(a,b) {
 // 13- Vowel Count
 function getCount(str) {  
     return (str.match(/[aeiou]/gi)||[]).length;
+}
+
+// --------------------------------
+// 14- Count the divisors of a number
+function getDivisorsCnt(n){
+    const arr = [...Array(n)];
+    return arr.map((_,i)=>{return Number.isInteger((arr.length/(i+1))) ? arr.push() : false}).filter((n)=>{return n > 0}).length;
+}
+
+// --------------------------------
+
+// 15- Complementary DNA
+function DNAStrand(dna){
+    let myObj = {T:"A", A:"T", C:"G", G:"C"};
+    return dna.replace(/(?:T|A|C|G)/gi,v=>myObj[v]);
+}
+
+// --------------------------------
+
+// 16- Count the Digit
+function nbDig(n, d) {
+    let arr = [];
+    for(let i = 0; i < n+1; i++){
+        arr.push((i)*(i));
+    }
+    return arr.join("").toString().match(new RegExp(d,"g") || []).length;
+}
+
+// --------------------------------
+
+// 17- Mumbling
+function accum(s) {
+  let res = s.split("");
+    for(let i = 0; i < res.length; i++){
+        for(let j = 0; j < i; j++){
+            res[i] += res[i];
+        }
+        res[i] = res[i].slice(0,res.indexOf(res[i])+1);
+    }
+    return res.map(v=>{return v.charAt(0).toUpperCase()+v.slice(1).toLowerCase()}).join("-");
+}
+
+// --------------------------------
+
+// 18- Sum of integers in string
+function sumOfIntegersInString(s){
+  let sum = 0;
+  let res = s.split(/\D/g).filter(v=>v!=NaN ? v:0)
+     .map(elmnt=>sum += parseInt(elmnt)).pop();
+  return isNaN(res) ? 0 : res;
+}
+
+// --------------------------------
+
+// 19- Scaling Squared Strings
+function scale(str, k, n) {
+  let res = str.split("\n").map(v=>v.split("").map(v=>v.repeat(k)).join(""))
+    .map(v=>v=v+"\n").map(v=>v.repeat(n)).join("").slice(0,-1);
+  return str == "" ? "" : res;
 }

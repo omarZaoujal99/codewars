@@ -28,7 +28,6 @@ function twoSort(s) {
 
 // 2- Get the mean of an array
 function getAverage(marks){
-    //TODO : calculate the downwar rounded average of the marks array
     const arrLen = marks.length;
     let arrAvg = 0;
     for(let i = 0; i < arrLen; i++){
@@ -52,7 +51,21 @@ function pipeFix(numbers){
 
 // --------------------------------
 
-// 4- Find the smallest integer in the array
+// 4- Multiplication table for number
+function multiTable(number) {
+    let str = "";
+    for(let i = 1; i <= 10; i++){
+      if(i == 10){
+        str += i + " * " + number + " = " + i*number;
+      }
+      else str += i + " * " + number + " = " + i*number + "\n";
+    }
+    return str;
+}
+
+// --------------------------------
+
+// 5- Find the smallest integer in the array
 class SmallestIntegerFinder {
     findSmallestInt(args) {
       return Math.min.apply(Math,args);
@@ -61,29 +74,28 @@ class SmallestIntegerFinder {
 
 // --------------------------------
 
-// 5- My head is at the wrong end!
+// 6- My head is at the wrong end!
 function fixTheMeerkat(arr) {
     return arr.reverse();
 }
 
 // --------------------------------
 
-// 6- Multiply
+// 7- Multiply
 function multiply(a, b){
-    let result= a * b;
-    return  result
+    return a * b;
 }
 
 // --------------------------------
 
-// 7- Convert a Number to a String!
+// 8- Convert a Number to a String!
 function numberToString(num) {
     return num.toString();
 }
 
 // --------------------------------
 
-// 8- Remove First and Last Character
+// 9- Remove First and Last Character
 function removeChar(str){
     return str.substring(1,str.length -1)
 };
