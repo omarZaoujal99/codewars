@@ -122,6 +122,13 @@ function sortArray(array) {
 
 // 7- HTML dynamic color string generation
 var generateColor = function() {
-  let randomHexe = (Math.random() * 0xfffff * 10).toString(16).slice(0,6);
-  return "#" + randomHexe;
-};
+    let randomHexe = (Math.random() * 0xfffff * 10).toString(16).slice(0,6);
+    return "#" + randomHexe;
+}
+
+// --------------------------------
+
+// 8- Grouped by commas
+function groupByCommas(n) {
+    return n.toString().split(/(?=(?:...)*$)/).join(",");
+}
