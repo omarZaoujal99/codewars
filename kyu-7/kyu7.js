@@ -249,3 +249,13 @@ function scale(str, k, n) {
     .map(v=>v=v+"\n").map(v=>v.repeat(n)).join("").slice(0,-1);
   return str == "" ? "" : res;
 }
+
+// --------------------------------
+
+// 20- Last Survivor
+function lastSurvivor(letters, coords) {
+  for(let i = 0; i < coords.length; i++){
+      letters = letters.slice(0,coords[i])+letters.slice(coords[i]+1);     
+  }
+  return letters;
+}
