@@ -1,4 +1,4 @@
-// here you'll find all kyu-8 katas --- above any code, you'll see the name of the kata
+// here you'll find all kyu-6 katas --- above any code, you'll see the name of the kata
 // notice: maybe you'll notice that the code getting better and more readable while you go down, the reason of the 
 // experience that I got with the passage of time  
 
@@ -138,4 +138,12 @@ function groupByCommas(n) {
 // 9- Create Phone Number
 function createPhoneNumber(numbers){
     return "("+numbers.slice(0,3).join("")+") "+numbers.slice(3,6).join("")+"-"+numbers.slice(6).join("");
+}
+
+// --------------------------------
+
+// 10- Valid Phone Number
+function validPhoneNumber(phoneNumber){
+  const regex = /^(\([0-9]{3}\) |[0-9]{3}-)[0-9]{3}-[0-9]{4}/;
+  return phoneNumber.match(regex) && phoneNumber.length == 14 ? true : false;
 }

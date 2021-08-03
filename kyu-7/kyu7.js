@@ -1,4 +1,4 @@
-// here you'll find all kyu-8 katas --- above any code, you'll see the name of the kata
+// here you'll find all kyu-7 katas --- above any code, you'll see the name of the kata
 // notice: maybe you'll notice that the code getting better and more readable while you go down, the reason of the 
 // experience that I got with the passage of time  
 
