@@ -32,3 +32,10 @@ function hexStringToRGB(hexString) {
     let parseIt = hexString.slice(1).split(/(?=(?:..)*$)/).map(v => parseInt(v,16));
     return {r:parseIt[0], g:parseIt[1], b:parseIt[2]};
 }
+
+// --------------------------------
+
+// 4- Where my anagrams at?
+function anagrams(word, words) {
+    return words.filter(v => JSON.stringify(v.split("").sort()) == JSON.stringify(word.split("").sort()) ? v : false)
+}
