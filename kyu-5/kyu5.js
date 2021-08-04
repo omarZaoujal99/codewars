@@ -1,5 +1,22 @@
-// here you'll find all kyu-5 katas --- above any code, you'll see the name of the kata
-// notice: maybe you'll notice that the code getting better and more readable while you go down, the reason of the 
+//                                                  *********
+//                                                  *********
+//                                                  *********
+//                                                  *********
+//                                                  *********
+//                                                  *********
+//                                                  *********
+//                                                  *********
+//                                                  *********
+//                                              ******************
+//                                                **************
+//                                                  **********
+//                                                    ******
+//                                                      **
+
+//                                 ************ VERY IMPORTANT TO READ ↓↓↓ ************
+
+// here you'll find all kyu-5 kata --- above any code, you'll see the name of the kata
+// notice: maybe you'll notice that the code getting better and more readable while you go down, the reason is the 
 // experience that I got with the passage of time  
 
 // --------------------------------
