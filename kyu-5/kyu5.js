@@ -56,3 +56,25 @@ function hexStringToRGB(hexString) {
 function anagrams(word, words) {
     return words.filter(v => JSON.stringify(v.split("").sort()) == JSON.stringify(word.split("").sort()) ? v : false)
 }
+
+// --------------------------------
+
+// 5- Weight for weight
+function orderWeight(strng) {
+    let obj = {}, arr = strng.split(/\s/);
+    for(let i = 0; i < arr.length; i++){
+        let length = arr[i].split("").map(v=> parseInt(v)).reduce((total,cur)=>total+=cur,0);
+        obj[length] == undefined ? obj[length] = [arr[i]] : obj[length].push(arr[i]);
+        obj[length].sort((a,b)=>a.charAt(0)-b.charAt(0));
+    } 
+    return Object.values(obj).map(v => v.sort()).join(" ").replace(/\W/g," ");
+}
+
+// --------------------------------
+
+// 6- Human Readable Time
+function humanReadable(seconds) {
+    // I'll create an array in this format [HH, MM, SS] then I'll join it by ":" 
+    let arr = [Math.floor((seconds/(60*60))%100), Math.floor((seconds/60)%60), seconds%60]
+    return arr.map(v=>v.toString().length == 1 ? "0"+v : v).join(":");
+}

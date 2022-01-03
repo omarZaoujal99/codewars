@@ -164,3 +164,17 @@ function validPhoneNumber(phoneNumber){
   const regex = /^(\([0-9]{3}\) |[0-9]{3}-)[0-9]{3}-[0-9]{4}/;
   return phoneNumber.match(regex) && phoneNumber.length == 14 ? true : false;
 }
+
+// --------------------------------
+
+// 11- Counting Duplicates
+function duplicateCount(text){
+  let res = text.toLowerCase().split("").sort();
+  let arr = [];
+  for(let i = 0; i < res.length; i++){
+      if(res[i] == res[i+1]){
+          arr.indexOf(res[i]) == -1 ? arr.push(res[i]) : false;
+      }
+  }
+  return arr.length;
+}
